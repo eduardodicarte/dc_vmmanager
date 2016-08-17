@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+
+import sys
+from br.com.dicarte.help.main_help import MainHelp
+from br.com.dicarte.help.version_info import VersionInfo
+
+
+def main():
+    if sys.argv.__len__() == 1:
+        print("You must pass at least one param")
+
+    if sys.argv.__contains__("--help"):
+        MainHelp()
+    elif sys.argv.__contains__("--version"):
+        VersionInfo()
+
+
+if __name__ == '__main__':
+    main()
